@@ -1,0 +1,23 @@
+$text-color:white;
+
+header{
+ background-image: url("../../../assets/images/zomato-banner.jpg");
+ background-repeat: no-repeat;
+ background-size: 100% 500px;;
+ height:500px;
+ width:100%;
+}
+
+.nav-link{
+    color:$text-color;
+    font-size: 20px;;
+}
+
+.main-title{
+    color:$text-color;
+    font-size:80px;
+    font-weight:bold;
+    text-shadow:5px 5px 5px black;
+    font-family:Forte Regular;
+
+}
