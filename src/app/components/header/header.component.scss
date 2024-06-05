@@ -21,3 +21,26 @@ header{
     font-family:Forte Regular;
 
 }
+fieldset{
+    border-left:none;
+    border-right:none;
+    border-bottom:none;
+    text-align:center;
+    width:100%;
+    font-family:Arial;
+    font-size:15px;
+}
+legend{
+    padding-left:35px;
+    padding-right:15px;
+    color:gray;
+    font-size:17px;
+}
+
+.modal-footer{
+    width:55%;    
+}
+.terms{
+    font-size:13px;
+    font-family:Arial;
+}
