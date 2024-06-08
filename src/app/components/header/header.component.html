@@ -41,14 +41,16 @@
                 <button data-bs-dismiss="modal" class="btn btn-close"></button>
             </div>
             <div class="modal-body">
-                <dl>
-                    
-                    <dd><input type="text" placeholder="Full Name" class="form-control mt-4 mb-3"></dd>                    
-                    <dd><input type="email" placeholder="Email" class="form-control mb-3"></dd>
-                    <dd><div><input type="checkbox" class="form-check-input me-2"><span class="terms">I agree to Zomato's<span class="text-danger">Terms of Service, Privacy Policy </span> and <span class="text-danger">Content Policies</span></span></div></dd>
-                    <dd><button class="btn btn-danger w-100 mt-3">Create account</button></dd>
+                <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+                <dl>                    
+                    <dd><input type="text" name="fullName" ngModel placeholder="Full Name" class="form-control mt-4 mb-3"></dd>                    
+                    <dd><input type="email" name="email" ngModel placeholder="Email" class="form-control mb-3"></dd>
+                    <dd><input type="text" name="password" ngModel placeholder="password" class="form-control mb-3"></dd>
+                    <dd><div><input type="checkbox" name="agree" ngModel class="form-check-input me-2"><span class="terms">I agree to Zomato's<span class="text-danger">Terms of Service, Privacy Policy </span> and <span class="text-danger">Content Policies</span></span></div></dd>
+                    <dd><button class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal">Create account</button></dd>
                     
                 </dl>
+            </form>
                 <fieldset>
                     <legend>or</legend>
                     <button class="btn text-center w-100"><img src="../../../assets/images/google_logo.png" width="30" height="30">Sign in with Google</button>
@@ -93,7 +95,7 @@
                 </fieldset>
             </div>
             <div class="modal-footer ">
-               <span class="float-start me-2"> New To Zomato?<span class="text-danger ">Create Account</span> </span>
+               <span class="float-start me-2"> New To Zomato?<span class="text-danger">Create Account</span> </span>
 
             </div>
 
@@ -110,15 +112,17 @@
                 <button data-bs-dismiss="modal" class="btn btn-close"></button>
             </div>
             <div class="modal-body">
+                <form #loginForm="ngForm" (ngSubmit)="LoginClicked(loginForm)">
                 <dl>
-                    <div><img src=""></div>
                     
-                    <dd><input type="email" placeholder="Email" class="form-control mb-3"></dd>
                     
-                    <dd><button class="btn btn-danger w-100 mt-3">Send One Time Password</button></dd>
+                    <dd><input type="email" name="email" ngModel placeholder="Email" class="form-control mb-3"></dd>
+                    <dd><input type="password" name="password" ngModel placeholder="Password" class="form-control mb-3"></dd>
+                    
+                    <dd><button class="btn btn-danger w-100 mt-3" data-bs-dismiss="modal" >Login</button></dd>
                     
                 </dl>
-              
+            </form>
             </div>
             <div class="modal-footer ">
                <span class="float-start me-2"> Already have an account?<span class="text-danger ">Log in</span> </span>
